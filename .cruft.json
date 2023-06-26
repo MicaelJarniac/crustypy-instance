@@ -1,0 +1,28 @@
+{
+  "template": "https://github.com/MicaelJarniac/crustypy",
+  "commit": "f7810b7fe0679e833c905e857e4f38778e27f980",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Micael Jarniac",
+      "email": "micael@jarniac.dev",
+      "github_username": "MicaelJarniac",
+      "year": "2023",
+      "project_name": "CrustyPy Instance",
+      "project_slug": "crustypy_instance",
+      "project_distribution_name": "crustypy-instance",
+      "project_short_description": "Generated with CrustyPy.",
+      "version": "0.0.0",
+      "shields_url": "https://img.shields.io",
+      "use_discord_community": "no",
+      "discord_invite": "inactive",
+      "discord_id": "inactive",
+      "report_method": "micael@jarniac.dev",
+      "__github_path": "MicaelJarniac/crustypy-instance",
+      "__github_url": "https://github.com/MicaelJarniac/crustypy-instance",
+      "__readthedocs_name": "crustypy-instance",
+      "_template": "https://github.com/MicaelJarniac/crustypy"
+    }
+  },
+  "directory": null
+}
