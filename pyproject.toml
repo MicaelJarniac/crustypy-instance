@@ -9,7 +9,7 @@ description = "Generated with CrustyPy."
 authors = ["Micael Jarniac <micael@jarniac.dev>"]
 license = "MIT"
 readme = "docs/README.md"
-packages = [{include = "crustypy_instance"}]
+packages = [{include = "crustypy_instance", from = "src"}]
 homepage = "https://github.com/MicaelJarniac/crustypy-instance"
 repository = "https://github.com/MicaelJarniac/crustypy-instance"
 documentation = "https://crustypy-instance.readthedocs.io"
