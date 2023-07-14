@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "crustypy-instance"
-version = "0.1.0"
+version = "0.0.0"
 description = "Generated with CrustyPy."
 authors = ["Micael Jarniac <micael@jarniac.dev>"]
 license = "MIT"
