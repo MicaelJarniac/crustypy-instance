@@ -20,7 +20,7 @@
 [label-repo]: https://img.shields.io/badge/%F0%9F%93%81-repo-darkblue?style=flat-square
 
 <!-- Build -->
-[badge-actions]: https://img.shields.io/github/actions/workflow/status/MicaelJarniac/crustypy-instance/nox.yml?branch=main&style=flat-square
+[badge-actions]: https://img.shields.io/github/actions/workflow/status/MicaelJarniac/crustypy-instance/ci.yml?branch=main&style=flat-square
 [actions]: https://github.com/MicaelJarniac/crustypy-instance/actions
 [badge-semantic-release]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square
 [semantic-release]: https://github.com/semantic-release/semantic-release
