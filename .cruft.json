@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/MicaelJarniac/crustypy",
-  "commit": "f7810b7fe0679e833c905e857e4f38778e27f980",
+  "commit": "9c266a0f3293bdd3ea9bb56354a0d450c3869fc5",
   "checkout": null,
   "context": {
     "cookiecutter": {
