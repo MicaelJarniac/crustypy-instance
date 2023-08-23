@@ -80,10 +80,3 @@ def test_code(session: nox.Session) -> None:
     """Test code."""
     install(session, groups=["main", "tests"], root=True, only=True, extras=True)
     session.run("pytest")
-
-
-@nox.session(python=python_versions, venv_params=venv_params)
-def benchmark_code(session: nox.Session) -> None:
-    """Benchmark code."""
-    install(session, groups=["tests"], root=False)
-    session.run("asv", "run")
