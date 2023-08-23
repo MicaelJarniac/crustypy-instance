@@ -1,9 +1,0 @@
-{
-    "arch": "x86_64",
-    "cpu": "12th Gen Intel(R) Core(TM) i5-1245U",
-    "machine": "micael-dell",
-    "num_cpu": "12",
-    "os": "Linux 6.2.0-27-generic",
-    "ram": "16044856",
-    "version": 1
-}

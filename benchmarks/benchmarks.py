@@ -1,31 +1,27 @@
-# Write the benchmarking functions here.
-# See "Writing benchmarks" in the asv docs for more information.
+"""Benchmarking for crustypy-instance."""
+
+from crustypy_instance import make_greeting
 
 
 class TimeSuite:
-    """An example benchmark that times the performance of various kinds
-    of iterating over dictionaries in Python.
-    """
+    """A benchmark suite for timing crustypy-instance."""
 
-    def setup(self):
-        self.d = {}
-        for x in range(500):
-            self.d[x] = None
+    def setup(self) -> None:
+        """Set up the benchmark by initializing the `name` attribute."""
+        self.name = "Micael Jarniac"
 
-    def time_keys(self):
-        for _key in self.d:
-            pass
-
-    def time_values(self):
-        for _value in self.d.values():
-            pass
-
-    def time_range(self):
-        d = self.d
-        for key in range(500):
-            d[key]
+    def time_make_greeting(self) -> None:
+        """Benchmark the `make_greeting` function for its execution time."""
+        make_greeting(self.name)
 
 
 class MemSuite:
-    def mem_list(self):
-        return [0] * 256
+    """A benchmark suite for measuring the memory usage of crustypy-instance."""
+
+    def setup(self) -> None:
+        """Set up the benchmark by initializing the `name` attribute."""
+        self.name = "Micael Jarniac"
+
+    def mem_make_greeting(self) -> str:
+        """Benchmark the `make_greeting` function for its memory usage."""
+        return make_greeting(self.name)
