@@ -5,7 +5,7 @@
   | ![Build][label-build] | [![Nox][badge-actions]][actions] [![semantic-release][badge-semantic-release]][semantic-release] [![PyPI][badge-pypi]][pypi] [![Read the Docs][badge-docs]][docs] |
   | ![Tests][label-tests] | [![coverage][badge-coverage]][coverage] [![pre-commit][badge-pre-commit]][pre-commit] [![asv][badge-asv]][asv] |
   | ![Standards][label-standards] | [![SemVer 2.0.0][badge-semver]][semver] [![Conventional Commits][badge-conventional-commits]][conventional-commits] |
-  | ![Code][label-code] | [![Poetry][badge-poetry]][poetry] [![Code style: black][badge-black]][Black] [![Ruff][badge-ruff]][ruff] [![Checked with mypy][badge-mypy]][mypy] |
+  | ![Code][label-code] | [![Poetry][badge-poetry]][poetry] [![Ruff][badge-ruff]][ruff] [![Checked with mypy][badge-mypy]][mypy] |
   | ![Repo][label-repo] | [![GitHub issues][badge-issues]][issues] [![GitHub stars][badge-stars]][stars] [![GitHub license][badge-license]][license] [![All Contributors][badge-all-contributors]][contributors] [![Contributor Covenant][badge-code-of-conduct]][code-of-conduct] |
 </div>
 
@@ -46,8 +46,6 @@
 <!-- Code -->
 [badge-poetry]: https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json&style=flat-square
 [poetry]: https://python-poetry.org
-[badge-black]: https://img.shields.io/badge/code%20style-black-black?style=flat-square
-[Black]: https://github.com/psf/black
 [badge-ruff]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat-square
 [ruff]: https://github.com/astral-sh/ruff
 [badge-mypy]: https://img.shields.io/badge/mypy-checked-2A6DB2?style=flat-square
