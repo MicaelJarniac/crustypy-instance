@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/MicaelJarniac/crustypy",
-  "commit": "81797f153c8d485ec930eaeff90cae60509c1ec6",
+  "commit": "5fda5eefe639284fdcae5aed23e21fb036d431fe",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -13,6 +13,7 @@
       "project_distribution_name": "crustypy-instance",
       "project_short_description": "Generated with CrustyPy.",
       "version": "0.0.0",
+      "main_branch": "main",
       "shields_url": "https://img.shields.io",
       "discord_invite": "inactive",
       "report_method": "micael@jarniac.dev",
@@ -20,7 +21,7 @@
       "__github_url": "https://github.com/MicaelJarniac/crustypy-instance",
       "__readthedocs_name": "crustypy-instance",
       "_template": "https://github.com/MicaelJarniac/crustypy",
-      "_commit": "81797f153c8d485ec930eaeff90cae60509c1ec6"
+      "_commit": "5fda5eefe639284fdcae5aed23e21fb036d431fe"
     }
   },
   "directory": null
