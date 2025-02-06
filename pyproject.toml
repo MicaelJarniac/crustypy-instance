@@ -1,31 +1,44 @@
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "crustypy-instance"
 version = "0.1.1"
 description = "Generated with CrustyPy."
-authors = ["Micael Jarniac <micael@jarniac.dev>"]
-license = "MIT"
+authors = [
+  {name = "Micael Jarniac", email = "micael@jarniac.dev"},
+]
+license = {text = "MIT"}
 readme = "docs/README.md"
-packages = [{include = "crustypy_instance", from = "src"}]
+requires-python = ">=3.9,<4.0"
+
+dependencies = [
+    "loguru (>=0.7.3,<0.8.0)"
+]
+
+dynamic = [
+  "classifiers",
+]
+
+[project.urls]
 homepage = "https://github.com/MicaelJarniac/crustypy-instance"
-repository = "https://github.com/MicaelJarniac/crustypy-instance"
+source = "https://github.com/MicaelJarniac/crustypy-instance"
+download = "https://pypi.org/project/crustypy-instance/#files"
+changelog = "https://github.com/MicaelJarniac/crustypy-instance/blob/main/docs/CHANGELOG.md"
 documentation = "https://crustypy-instance.readthedocs.io"
+issues = "https://github.com/MicaelJarniac/crustypy-instance/issues"
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+packages = [{include = "crustypy_instance", from = "src"}]
 classifiers = [
   # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
   "Development Status :: 1 - Planning",
-  "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Typing :: Typed",
 ]
-
-[tool.poetry.dependencies]
-python = "^3.9"
-
-loguru = "^0.7.0"
 
 [tool.poetry.group.tests.dependencies]
 coverage = "^7.2.7"
@@ -60,16 +73,12 @@ pre-commit = "^3.3.3"
 nox = "^2023.4.22"
 python-semantic-release = "^8.0.2"
 
-[tool.poetry.urls]
-"Changelog" = "https://github.com/MicaelJarniac/crustypy-instance/blob/main/docs/CHANGELOG.md"
-"Bug Tracker" = "https://github.com/MicaelJarniac/crustypy-instance/issues"
-
 [tool.ruff]
 # https://beta.ruff.rs/docs/rules
 line-length = 88  # Default
 force-exclude = true
 src = ["src"]
-target-version = "py38"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["ALL"]
@@ -104,7 +113,7 @@ show_column_numbers = true
 # pretty = true
 
 [tool.semantic_release]
-version_toml = ["pyproject.toml:tool.poetry.version"]
+version_toml = ["pyproject.toml:project.version"]
 build_command = """
   python -m pip install build~=0.10.0
   python -m build .
