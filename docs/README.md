@@ -14,8 +14,8 @@
 </div>
 
 <!-- Badges -->
-[badge-chat]: https://img.shields.io/badge/dynamic/json?color=green&label=chat&query=%24.approximate_presence_count&suffix=%20online&logo=discord&style=flat-square&url=https%3A%2F%2Fdiscord.com%2Fapi%2Fv10%2Finvites%2Finactive%3Fwith_counts%3Dtrue
-[chat]: https://discord.gg/inactive
+[badge-chat]: https://img.shields.io/badge/dynamic/json?color=green&label=chat&query=%24.approximate_presence_count&suffix=%20online&logo=discord&style=flat-square&url=https%3A%2F%2Fdiscord.com%2Fapi%2Fv10%2Finvites%2FYe9yJtZQuN%3Fwith_counts%3Dtrue
+[chat]: https://discord.gg/Ye9yJtZQuN
 
 <!-- Labels -->
 [label-badges]: https://img.shields.io/badge/%F0%9F%94%96-badges-purple?style=for-the-badge
