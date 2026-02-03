@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/MicaelJarniac/crustypy",
-  "commit": "061af391324d239112f64317e878865b80349420",
+  "commit": "c918076893705d3293055b4d0f684a3036b32ee9",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -21,7 +21,7 @@
       "__github_url": "https://github.com/MicaelJarniac/crustypy-instance",
       "__readthedocs_name": "crustypy-instance",
       "_template": "https://github.com/MicaelJarniac/crustypy",
-      "_commit": "061af391324d239112f64317e878865b80349420"
+      "_commit": "c918076893705d3293055b4d0f684a3036b32ee9"
     }
   },
   "directory": null
