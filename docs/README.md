@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" markdown="1">
 
   [![Discord][badge-chat]][chat]
   <br>
@@ -75,6 +75,9 @@
 <!---->
 
 # CrustyPy Instance
+
+Welcome to **CrustyPy Instance's** documentation!
+
 Generated with CrustyPy.
 
 [Read the Docs][docs]
