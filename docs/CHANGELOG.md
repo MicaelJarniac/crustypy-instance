@@ -1,6 +1,107 @@
 # CHANGELOG
 
 <!-- version list -->
+
+## v0.2.0 (2026-11-07)
+
+### Bug Fixes
+
+- CI lasts forever
+  ([`ec901a7`](https://github.com/MicaelJarniac/crustypy-instance/commit/ec901a728263a6253fd175cdff0804c846e90146))
+
+- Discord invite
+  ([`b815ff6`](https://github.com/MicaelJarniac/crustypy-instance/commit/b815ff6675fe85e3bf8c1f86a4f3090456106106))
+
+- Template update
+  ([`ae3faad`](https://github.com/MicaelJarniac/crustypy-instance/commit/ae3faad7148c183603824b6ef579f5a6b37c9762))
+
+### Build System
+
+- **deps**: Separate asv from tests
+  ([#10](https://github.com/MicaelJarniac/crustypy-instance/pull/10),
+  [`12a0674`](https://github.com/MicaelJarniac/crustypy-instance/commit/12a0674227ea50f400595d6fce5fb258c82e41b4))
+
+- **deps**: Update Poetry to 2.0
+  ([`d77f929`](https://github.com/MicaelJarniac/crustypy-instance/commit/d77f929bccdb20f3a4381aeb5714135b9cf6c7e3))
+
+- **release**: Update Python Semantic Release
+  ([`f404355`](https://github.com/MicaelJarniac/crustypy-instance/commit/f40435505835f174e4ddea3fd9d7189c534a2778))
+
+### Chores
+
+- Cruft update
+  ([`ab9d0d0`](https://github.com/MicaelJarniac/crustypy-instance/commit/ab9d0d0800dd0b96d8c99d207842cc84349deaaa))
+
+- Lockfile
+  ([`25e6968`](https://github.com/MicaelJarniac/crustypy-instance/commit/25e69689b101411f33da173c8bb654e4478cd3ff))
+
+- Poetry lock
+  ([`ecc77b6`](https://github.com/MicaelJarniac/crustypy-instance/commit/ecc77b6dd763dd45921cd68f7cdcad750bb1a36d))
+
+- Remove `stubs` Poetry dependency group
+  ([#8](https://github.com/MicaelJarniac/crustypy-instance/pull/8),
+  [`b0fcdbe`](https://github.com/MicaelJarniac/crustypy-instance/commit/b0fcdbee149167ce3268ddf6d8354ae19fd2a7ba))
+
+- Remove asv from Nox ([#10](https://github.com/MicaelJarniac/crustypy-instance/pull/10),
+  [`12a0674`](https://github.com/MicaelJarniac/crustypy-instance/commit/12a0674227ea50f400595d6fce5fb258c82e41b4))
+
+- Template update
+  ([`a348dcc`](https://github.com/MicaelJarniac/crustypy-instance/commit/a348dcce74a7ea6ffe2561ddd90e1028b3c22454))
+
+- Template update
+  ([`ee4f1fc`](https://github.com/MicaelJarniac/crustypy-instance/commit/ee4f1fc3cea2970d99ca2386e48bec9dc389cd83))
+
+- Template update
+  ([`7af6ce2`](https://github.com/MicaelJarniac/crustypy-instance/commit/7af6ce217e25ab22cb7caf9fcd0071606fba8f82))
+
+- Template update ([#6](https://github.com/MicaelJarniac/crustypy-instance/pull/6),
+  [`f483ae2`](https://github.com/MicaelJarniac/crustypy-instance/commit/f483ae23e9935f54b497e4bfd7e79fa3adf29b82))
+
+- Update cruft
+  ([`374559f`](https://github.com/MicaelJarniac/crustypy-instance/commit/374559f7568c74fff7996831e0b59cdc8be05fe0))
+
+- Update cruft
+  ([`0a3bfee`](https://github.com/MicaelJarniac/crustypy-instance/commit/0a3bfee81debdd7155568926cda82fb207504e54))
+
+- Update template
+  ([`aa2a3f7`](https://github.com/MicaelJarniac/crustypy-instance/commit/aa2a3f7ec6d617d1edd45d45ea5fba906b093474))
+
+- Update template
+  ([`4bef4e4`](https://github.com/MicaelJarniac/crustypy-instance/commit/4bef4e4c5a29ca53fc05cef21bc4bf1c1b9ff124))
+
+- Update template
+  ([`1a76d3f`](https://github.com/MicaelJarniac/crustypy-instance/commit/1a76d3fe8bc24770c9596c5fb92021c81c7a15f1))
+
+- Update template
+  ([`80023be`](https://github.com/MicaelJarniac/crustypy-instance/commit/80023bedfd420bde81cb6d06779fa2abaec0226c))
+
+- Update template
+  ([`2973b9d`](https://github.com/MicaelJarniac/crustypy-instance/commit/2973b9de8afd2c2834b88be98fdab9f2fb081f98))
+
+- Update template
+  ([`df022f4`](https://github.com/MicaelJarniac/crustypy-instance/commit/df022f4a72ec9d2bfad23cb4c8e71ce57db85d18))
+
+- Update to the latest CrustyPy template
+  ([`ef9cdc7`](https://github.com/MicaelJarniac/crustypy-instance/commit/ef9cdc7e8d7f9ef8829d9a124aa3304631d7ca58))
+
+- Uv lock
+  ([`f87acf1`](https://github.com/MicaelJarniac/crustypy-instance/commit/f87acf143708472dca3296a674689ad521471ddd))
+
+### Features
+
+- Add benchmarking tools ([#10](https://github.com/MicaelJarniac/crustypy-instance/pull/10),
+  [`12a0674`](https://github.com/MicaelJarniac/crustypy-instance/commit/12a0674227ea50f400595d6fce5fb258c82e41b4))
+
+- Lock
+  ([`0cad873`](https://github.com/MicaelJarniac/crustypy-instance/commit/0cad8737e179bdf25cf3d878076eaf37b6089af7))
+
+- MkDocs
+  ([`f28ac75`](https://github.com/MicaelJarniac/crustypy-instance/commit/f28ac75885c3e50ea126b0a2ccf210134eec50a4))
+
+- Template update
+  ([`6e04c3f`](https://github.com/MicaelJarniac/crustypy-instance/commit/6e04c3f355de11946f11085df10c81bad8679d07))
+
+
 ## v0.1.1 (2023-07-14)
 
 ### Build
