@@ -1,7 +1,7 @@
 {
   "template": "https://github.com/MicaelJarniac/crustypy",
-  "commit": "c918076893705d3293055b4d0f684a3036b32ee9",
-  "checkout": null,
+  "commit": "f67ec04fe63c347be17c825bc461f5a554649977",
+  "checkout": "docs/migration-guide",
   "context": {
     "cookiecutter": {
       "full_name": "Micael Jarniac",
@@ -21,7 +21,7 @@
       "__github_url": "https://github.com/MicaelJarniac/crustypy-instance",
       "__readthedocs_name": "crustypy-instance",
       "_template": "https://github.com/MicaelJarniac/crustypy",
-      "_commit": "c918076893705d3293055b4d0f684a3036b32ee9"
+      "_commit": "f67ec04fe63c347be17c825bc461f5a554649977"
     }
   },
   "directory": null

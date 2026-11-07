@@ -1,7 +1,6 @@
 # CHANGELOG
 
-
-
+<!-- version list -->
 ## v0.1.1 (2023-07-14)
 
 ### Build

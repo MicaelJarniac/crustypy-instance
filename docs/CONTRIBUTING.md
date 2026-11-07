@@ -63,7 +63,7 @@ Here is a summary of the steps to follow:
 ```bash
 $ git checkout main
 $ git pull upstream main
-$ uv sync --all-extras
+$ uv sync --all-extras --all-groups
 ```
 3. Create a new topic branch (off the main project development branch) to contain your feature, change, or fix:
 ```bash
@@ -74,11 +74,11 @@ $ git checkout -b <topic-branch-name>
 ```bash
 $ git push origin <topic-branch-name>
 ```
-6. [Open a Pull Request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) with a clear title and description.
+6. [Open a Pull Request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) with a clear title and description.
 
 **Tips**:
-- For ambitious tasks, open a Pull Request as soon as possible with the `[WIP]` prefix in the title, in order to get feedback and help from the community.
-- [Allow crustypy-instance maintainers to make changes to your Pull Request branch](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork). This way, we can rebase it and make some minor changes if necessary. All changes we make will be done in new commit and we'll ask for your approval before merging them.
+- For ambitious tasks, open a [draft Pull Request](https://docs.github.com/en/pull-requests/reference/pull-requests#draft-pull-requests) as soon as possible, in order to get feedback and help from the community.
+- [Allow crustypy-instance maintainers to make changes to your Pull Request branch](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork). This way, we can rebase it and make some minor changes if necessary. All changes we make will be done in new commit and we'll ask for your approval before merging them.
 
 ## Coding rules
 
@@ -95,18 +95,18 @@ To ensure consistency and quality throughout the source code, all code modificat
 ### Documentation
 
 To ensure consistency and quality, all documentation modifications must:
-- Refer to brand in [bold](https://help.github.com/articles/basic-writing-and-formatting-syntax/#styling-text) with proper capitalization, i.e. **GitHub**, **CrustyPy Instance**
-- Prefer [tables](https://help.github.com/articles/organizing-information-with-tables) over [lists](https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists) when listing key values, i.e. List of options with their description
-- Use [links](https://help.github.com/articles/basic-writing-and-formatting-syntax/#links) when you are referring to:
+- Refer to brand in [bold](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text) with proper capitalization, i.e. **GitHub**, **CrustyPy Instance**
+- Prefer [tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables) over [lists](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) when listing key values, i.e. List of options with their description
+- Use [links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#links) when you are referring to:
   - a **CrustyPy Instance** concept described somewhere else in the documentation, i.e. How to [contribute](CONTRIBUTING.md)
   - a third-party product/brand/service, i.e. Integrate with [GitHub](https://github.com)
-  - an external concept or feature, i.e. Create a [GitHub release](https://help.github.com/articles/creating-releases)
+  - an external concept or feature, i.e. Create a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
   - a package or module, i.e. The [`@MicaelJarniac/crustypy-instance`](https://github.com/MicaelJarniac/crustypy-instance) module
-- Use the [single backtick `code` quoting](https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code) for:
+- Use the [single backtick `code` quoting](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code) for:
   - commands inside sentences, i.e. the `uv` command
   - programming language keywords, i.e. `for`, `with`, `dict`
   - packages or modules, i.e. The [`@MicaelJarniac/crustypy-instance`](https://github.com/MicaelJarniac/crustypy-instance) module
-- Use the [triple backtick `code` formatting](https://help.github.com/articles/creating-and-highlighting-code-blocks) for:
+- Use the [triple backtick `code` formatting](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) for:
   - code examples
   - configuration examples
   - sequence of command lines
@@ -136,7 +136,7 @@ Each commit message consists of a **header**, a **body** and a **footer**. The h
 
 The **header** is mandatory and the **scope** of the header is optional.
 
-The **footer** can contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages).
+The **footer** can contain a [closing reference to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue).
 
 #### Revert
 
@@ -199,7 +199,7 @@ The default graphite width of 10mm is always used for performance reasons.
 
 ### Set up the workspace
 
-[Clone](https://guides.github.com/activities/forking/#clone) the project, configure the remotes and install the dependencies:
+[Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the project, configure the remotes and install the dependencies:
 
 ```bash
 # Clone the repo into the current directory
@@ -208,12 +208,15 @@ git clone https://github.com/MicaelJarniac/crustypy-instance
 # Navigate to the newly cloned directory
 cd crustypy-instance
 
-# Set up the environment
-uv sync --all-extras
+# Set up the environment. Dev tooling lives in dependency *groups*, which
+# `--all-extras` alone does not install, so ask for both.
+uv sync --all-extras --all-groups
 
 # Set up pre-commit hooks
-pre-commit install
+uv run pre-commit install
 ```
+
+Every command below runs through `uv run`, so it uses the project's locked tools; activate `.venv` instead if you prefer to drop the prefix.
 
 ### Set up your editor
 
@@ -225,11 +228,18 @@ Here's a great article on how to do that: [Don't put .idea and .vscode directori
 
 This repository uses [pre-commit](https://pre-commit.com) to automatically check the changes prior to committing.
 
-It can be run on demand with `pre-commit run`, and optionally on all files with `pre-commit run --all-files`.
+It can be run on demand with `uv run pre-commit run`, and optionally on all files with `uv run pre-commit run --all-files`.
+
+Besides the generic file checks, the hooks run Ruff, check `uv.lock` is up to date, spell check with [typos](https://github.com/crate-ci/typos) (add false positives to `[tool.typos]` in `pyproject.toml`) and audit the GitHub workflows with [zizmor](https://docs.zizmor.sh).
 
 ### Lint
 
-This repository uses [Ruff](https://docs.astral.sh/ruff) for linting and formatting.
+This repository uses [Ruff](https://docs.astral.sh/ruff) for linting and formatting:
+
+```bash
+uv run ruff check --fix
+uv run ruff format
+```
 
 **Tips**:
 - [Set up your editor](#set-up-your-editor) to see linting errors directly in your editor and automatically fix them on save.
@@ -238,11 +248,29 @@ This repository uses [Ruff](https://docs.astral.sh/ruff) for linting and formatt
 
 This repository uses [pytest](https://docs.pytest.org) for writing and running tests.
 
-Before pushing your code changes make sure all **tests pass** and the **coverage is 100%**:
+Before pushing your code changes make sure all **tests pass** and the **coverage is 100%** (line and branch). Docstring examples run as doctests too:
 
 ```bash
-pytest --cov
+uv run pytest --cov
 ```
+
+### Type checking
+
+This repository uses [ty](https://docs.astral.sh/ty) for type checking:
+
+```bash
+uv run ty check
+```
+
+### Running every check
+
+[Nox](https://nox.thea.codes) runs every check exactly as CI does, on every supported Python version:
+
+```bash
+uv run nox
+```
+
+Locally, the lint and format sessions fix what they can; in CI (when `CI` is set) they only check, as does the lockfile session.
 
 ### Docs
 
@@ -250,15 +278,15 @@ MkDocs Material is used to build the documentation, with mkdocstrings to automat
 
 ```bash
 # Build documentation
-nox -s docs
+uv run nox -s docs
 
 # Serve documentation locally with live reload
-nox -s docs_serve
+uv run nox -s docs_serve
 
-# Or use mkdocs directly
-cd docs/
-mkdocs build --strict  # Build HTML docs
-mkdocs serve           # Serve with live reload at http://127.0.0.1:8000
+# Or use mkdocs directly, from the repository root -- `mkdocs.yml` lives
+# there, not in `docs/`.
+uv run mkdocs build --strict  # Build HTML docs
+uv run mkdocs serve           # Serve with live reload at http://127.0.0.1:8000
 ```
 
 ### Requirements
@@ -275,7 +303,7 @@ To update installed packages, run `uv lock --upgrade-package <package name>`.
 
 Always lock the dependencies after updating them, by running `uv lock`.
 
-When updating development requirements, make sure to also update the related pre-commit hooks in [`.pre-commit-config.yaml`](../.pre-commit-config.yaml).
+[Dependabot](https://docs.github.com/en/code-security/dependabot) opens weekly grouped updates for the dependencies, the pre-commit hooks and the GitHub Actions. The Ruff pre-commit hooks run the version locked in `uv.lock`, so there is nothing else to keep in step.
 
 ### Updating template
 
@@ -285,7 +313,7 @@ When updating development requirements, make sure to also update the related pre
 cruft update
 ```
 
-After updating, the versions of dependencies might change, so use `uv sync --all-extras`.
+After updating, the versions of dependencies might change, so use `uv sync --all-extras --all-groups`.
 
 ## Add yourself as a contributor
 

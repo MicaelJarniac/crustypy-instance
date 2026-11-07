@@ -1,10 +1,37 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 'v5.0.0'
+    rev: 'v6.0.0'
     hooks:
     -   id: check-toml
     -   id: check-yaml
+        exclude: ^mkdocs\.yml$
     -   id: check-json
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
-    -   id: requirements-txt-fixer
+# Ruff runs from the locked `linting` group, so uv.lock is its only pin.
+-   repo: local
+    hooks:
+    -   id: ruff-check
+        name: ruff check
+        entry: uv run --frozen --only-group=linting ruff check --fix --force-exclude
+        language: unsupported
+        types_or: [python, pyi]
+        require_serial: true
+    -   id: ruff-format
+        name: ruff format
+        entry: uv run --frozen --only-group=linting ruff format --force-exclude
+        language: unsupported
+        types_or: [python, pyi]
+        require_serial: true
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    rev: '0.13.7'
+    hooks:
+    -   id: uv-lock
+-   repo: https://github.com/crate-ci/typos
+    rev: 'v1.52.0'
+    hooks:
+    -   id: typos
+-   repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: 'v1.32.0'
+    hooks:
+    -   id: zizmor
