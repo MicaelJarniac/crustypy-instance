@@ -1,5 +1,7 @@
 """Benchmarking for crustypy-instance."""
 
+__all__: tuple[str, ...] = ("MemSuite", "TimeSuite")
+
 from crustypy_instance import make_greeting
 
 

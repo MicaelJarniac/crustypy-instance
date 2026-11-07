@@ -6,9 +6,17 @@ repo_name: "MicaelJarniac/crustypy-instance"
 copyright: "Copyright &copy; 2023, Micael Jarniac"
 
 # Documentation source directory (relative to this config file)
-docs_dir: "."
+docs_dir: "docs"
 # Build output directory (outside docs dir to avoid conflicts)
-site_dir: "../site"
+site_dir: "site"
+
+# Report broken links, anchors and pages missing from `nav` as warnings, so
+# `mkdocs build --strict` (nox, Read the Docs) fails on them.
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
 
 theme:
   name: material
@@ -119,6 +127,8 @@ nav:
   - Contributing:
     - Guide: CONTRIBUTING.md
     - Code of Conduct: CODE_OF_CONDUCT.md
+    - Security Policy: SECURITY.md
+    - Changelog: CHANGELOG.md
   - Reference:
     - Tools & Standards: reference.md
     - API Reference: api.md
@@ -131,8 +141,9 @@ extra:
     - icon: fontawesome/brands/python
       link: "https://pypi.org/project/crustypy-instance"
       name: PyPI Package
-  version:
-    provider: mike
+  # No `version.provider: mike` -- `mike` is not installed and Read the Docs
+  # builds with plain `mkdocs`, so declaring it renders a version selector
+  # backed by a `versions.json` that is never generated.
 
 extra_css:
   - stylesheets/extra.css

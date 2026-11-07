@@ -9,7 +9,7 @@
   | ![Build][label-build] | [![Nox][badge-actions]][actions] [![semantic-release][badge-semantic-release]][semantic-release] [![PyPI][badge-pypi]][pypi] [![Read the Docs][badge-docs]][docs] |
   | ![Tests][label-tests] | [![coverage][badge-coverage]][coverage] [![pre-commit][badge-pre-commit]][pre-commit] [![asv][badge-asv]][asv] |
   | ![Standards][label-standards] | [![SemVer 2.0.0][badge-semver]][semver] [![Conventional Commits][badge-conventional-commits]][conventional-commits] |
-  | ![Code][label-code] | [![uv][badge-uv]][uv] [![Ruff][badge-ruff]][ruff] [![Nox][badge-nox]][nox] [![Checked with mypy][badge-mypy]][mypy] |
+  | ![Code][label-code] | [![uv][badge-uv]][uv] [![Ruff][badge-ruff]][ruff] [![Nox][badge-nox]][nox] [![ty][badge-ty]][ty] |
   | ![Repo][label-repo] | [![GitHub issues][badge-issues]][issues] [![GitHub stars][badge-stars]][stars] [![GitHub license][badge-license]][license] [![All Contributors][badge-all-contributors]][contributors] [![Contributor Covenant][badge-code-of-conduct]][code-of-conduct] |
 </div>
 
@@ -56,8 +56,8 @@
 [ruff]: https://github.com/astral-sh/ruff
 [badge-nox]: https://img.shields.io/badge/%F0%9F%A6%8A-Nox-D85E00.svg?style=flat-square
 [nox]: https://github.com/wntrblm/nox
-[badge-mypy]: https://img.shields.io/badge/mypy-checked-2A6DB2?style=flat-square
-[mypy]: http://mypy-lang.org
+[badge-ty]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ty/main/assets/badge/v0.json&style=flat-square
+[ty]: https://github.com/astral-sh/ty
 
 <!-- Repo -->
 [badge-issues]: https://img.shields.io/github/issues/MicaelJarniac/crustypy-instance?style=flat-square
@@ -69,8 +69,8 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [badge-all-contributors]: https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-[contributors]: #Contributors-✨
-[badge-code-of-conduct]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa?style=flat-square
+[contributors]: #contributors
+[badge-code-of-conduct]: https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa?style=flat-square
 [code-of-conduct]: CODE_OF_CONDUCT.md
 <!---->
 
@@ -102,16 +102,27 @@ You can also install the latest version of the code directly from GitHub:
 # With uv
 uv add git+https://github.com/MicaelJarniac/crustypy-instance
 # With pip
-pip install git+git://github.com/MicaelJarniac/crustypy-instance
+pip install git+https://github.com/MicaelJarniac/crustypy-instance
 # With Poetry
-poetry add git+git://github.com/MicaelJarniac/crustypy-instance
+poetry add git+https://github.com/MicaelJarniac/crustypy-instance
 ```
 
 ## Usage
 For more examples, see the [full documentation][docs].
 
 ```python
-from crustypy_instance import crustypy_instance
+from crustypy_instance import make_greeting
+
+print(make_greeting("World"))
+```
+
+### Logging
+*crustypy-instance* logs with [Loguru](https://github.com/Delgan/loguru), disabled by default as befits a library. Opt in from your application:
+
+```python
+from loguru import logger
+
+logger.enable("crustypy_instance")
 ```
 
 ## Contributing
@@ -121,7 +132,7 @@ Please make sure to update tests as appropriate.
 
 More details can be found in [CONTRIBUTING](CONTRIBUTING.md).
 
-## Contributors ✨
+## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -134,6 +145,6 @@ More details can be found in [CONTRIBUTING](CONTRIBUTING.md).
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
-[MIT](../LICENSE)
+[MIT][license]
 
 This project was created with the [MicaelJarniac/crustypy](https://github.com/MicaelJarniac/crustypy) template.
