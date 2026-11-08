@@ -6,7 +6,7 @@
 
   | | ![Badges][label-badges] |
   |:-|:-|
-  | ![Build][label-build] | [![Nox][badge-actions]][actions] [![semantic-release][badge-semantic-release]][semantic-release] [![PyPI][badge-pypi]][pypi] [![Read the Docs][badge-docs]][docs] |
+  | ![Build][label-build] | [![Nox][badge-actions]][actions] [![Python Semantic Release][badge-semantic-release]][semantic-release] [![PyPI][badge-pypi]][pypi] [![Read the Docs][badge-docs]][docs] |
   | ![Tests][label-tests] | [![coverage][badge-coverage]][coverage] [![pre-commit][badge-pre-commit]][pre-commit] [![asv][badge-asv]][asv] |
   | ![Standards][label-standards] | [![SemVer 2.0.0][badge-semver]][semver] [![Conventional Commits][badge-conventional-commits]][conventional-commits] |
   | ![Code][label-code] | [![uv][badge-uv]][uv] [![Ruff][badge-ruff]][ruff] [![Nox][badge-nox]][nox] [![ty][badge-ty]][ty] |
@@ -29,7 +29,7 @@
 [badge-actions]: https://img.shields.io/github/actions/workflow/status/MicaelJarniac/crustypy-instance/ci.yml?branch=main&style=flat-square
 [actions]: https://github.com/MicaelJarniac/crustypy-instance/actions
 [badge-semantic-release]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square
-[semantic-release]: https://github.com/semantic-release/semantic-release
+[semantic-release]: https://github.com/python-semantic-release/python-semantic-release
 [badge-pypi]: https://img.shields.io/pypi/v/crustypy-instance?style=flat-square
 [pypi]: https://pypi.org/project/crustypy-instance
 [badge-docs]: https://img.shields.io/readthedocs/crustypy-instance?style=flat-square
@@ -60,6 +60,7 @@
 [ty]: https://github.com/astral-sh/ty
 
 <!-- Repo -->
+<!-- Absolute links: this file is also the PyPI description, where relative ones break. -->
 [badge-issues]: https://img.shields.io/github/issues/MicaelJarniac/crustypy-instance?style=flat-square
 [issues]: https://github.com/MicaelJarniac/crustypy-instance/issues
 [badge-stars]: https://img.shields.io/github/stars/MicaelJarniac/crustypy-instance?style=flat-square
@@ -69,9 +70,9 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [badge-all-contributors]: https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-[contributors]: #contributors
+[contributors]: https://github.com/MicaelJarniac/crustypy-instance#contributors
 [badge-code-of-conduct]: https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa?style=flat-square
-[code-of-conduct]: CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/MicaelJarniac/crustypy-instance/blob/main/docs/CODE_OF_CONDUCT.md
 <!---->
 
 # CrustyPy Instance
@@ -130,7 +131,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-More details can be found in [CONTRIBUTING](CONTRIBUTING.md).
+More details can be found in [CONTRIBUTING](https://github.com/MicaelJarniac/crustypy-instance/blob/main/docs/CONTRIBUTING.md).
 
 ## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
