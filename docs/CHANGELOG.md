@@ -2,6 +2,22 @@
 
 <!-- version list -->
 
+## v0.2.1 (2026-11-08)
+
+### Bug Fixes
+
+- Reword the make_greeting summary line
+  ([`9d2e5e3`](https://github.com/MicaelJarniac/crustypy-instance/commit/9d2e5e357b75e555c177cd3b4a838e346d659192))
+
+- Update to the latest CrustyPy template
+  ([`6b019eb`](https://github.com/MicaelJarniac/crustypy-instance/commit/6b019eb77ccfae41d95c61ba8d56a42b4bbea4fe))
+
+### Chores
+
+- Point cruft at the merged template commit
+  ([`91ca345`](https://github.com/MicaelJarniac/crustypy-instance/commit/91ca345946254eb1e54d3d13e05efdcfa62cf3aa))
+
+
 ## v0.2.0 (2026-11-07)
 
 ### Bug Fixes

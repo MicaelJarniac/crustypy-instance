@@ -1,6 +1,6 @@
 [project]
 name = "crustypy-instance"
-version = "0.2.0"
+version = "0.2.1"
 description = "Generated with CrustyPy."
 authors = [
   {name = "Micael Jarniac", email = "micael@jarniac.dev"},
