@@ -6,7 +6,7 @@ from loguru import logger
 
 
 def make_greeting(name: str) -> str:
-    """Make greeting message.
+    """Make a greeting message.
 
     This function is an example, and should be deleted once
     you're familiar with how the project is structured.
